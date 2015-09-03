@@ -71,6 +71,7 @@
     "norman-testing-tp": "*",
     "norman-testing-tp-client": "*",
     "norman-testing-server": "*",
+	"norman-promise":"0.1.0",
     "chromedriver": "2.15.0",
     "request": "^2.51.0",
     "sinon": "~1.14.1",

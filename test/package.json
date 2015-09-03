@@ -1,6 +1,6 @@
 {
   "name": "norman-auth-e2e",
-  "version": "0.10.17",
+  "version": "0.1.0",
   "description": "Norman Auth End2End tests",
   "main": " ",
   "scripts": {
@@ -21,7 +21,7 @@
   "peerDependencies": {
     "norman-common-server": "*",
     "norman-server-tp": "*",
-    "node-sap-app-server": "~0.1.20",
+    "node-sap-app-server": "*",
     "norman-audit-server": "*",
     "norman-client-tp": "*",
     "norman-shell-client": "*",
