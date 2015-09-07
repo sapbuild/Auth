@@ -127,7 +127,7 @@ describe('OptOutService', function () {
     describe('#add', function () {
         it('should add a simple email', function (done) {
             var optOutService = commonServer.registry.getModule('OptOutService');
-            var email = 'test-add@sap.com';
+            var email = 'test-add@example.com';
             optOutService.add(email, dummyContext)
                 .then(function (added) {
                     expect(added).to.be.true;
@@ -139,7 +139,7 @@ describe('OptOutService', function () {
                 .then(testPassed(done), testFailed(done));
         });
         it('should support adding multiple times the same email', function (done) {
-            var email = 'test-add2@sap.com';
+            var email = 'test-add2@example.com';
             var optOutService = commonServer.registry.getModule('OptOutService');
             optOutService.add(email, dummyContext)
                 .then(function (added) {
@@ -159,7 +159,7 @@ describe('OptOutService', function () {
 
     describe('#isOptedOut', function () {
         it('should return true if the user opted out', function (done) {
-            var email = 'test-isOptedOut@sap.com';
+            var email = 'test-isOptedOut@example.com';
             var optOutService = commonServer.registry.getModule('OptOutService');
             optOutService.add(email, dummyContext)
                 .then(function () {
@@ -171,8 +171,8 @@ describe('OptOutService', function () {
                 .then(testPassed(done), testFailed(done));
         });
         it('should be case insensitive', function (done) {
-            var emailUpper = 'TEST-CASING@SAP.COM';
-            var emailLower = 'test-casing@sap.com';
+            var emailUpper = 'TEST-CASING@EXAMPLE.COM';
+            var emailLower = 'test-casing@example.com';
             var optOutService = commonServer.registry.getModule('OptOutService');
             optOutService.add(emailUpper, dummyContext)
                 .then(function () {
@@ -185,7 +185,7 @@ describe('OptOutService', function () {
         });
         it('should return false if the user is not in the list', function (done) {
             var optOutService = commonServer.registry.getModule('OptOutService');
-            optOutService.isOptedOut('dummy@sap.com')
+            optOutService.isOptedOut('dummy@example.com')
                 .then(function (res) {
                     expect(res).to.be.false;
                 })
@@ -196,7 +196,7 @@ describe('OptOutService', function () {
     describe('#remove', function () {
         it('should remove a simple email', function (done) {
             var optOutService = commonServer.registry.getModule('OptOutService');
-            var email = 'test-remove@sap.com';
+            var email = 'test-remove@example.com';
             optOutService.add(email, dummyContext)
                 .then(function () {
                     return optOutService.isOptedOut(email);
@@ -215,7 +215,7 @@ describe('OptOutService', function () {
                 .then(testPassed(done), testFailed(done));
         });
         it('should support removing an entry which does not exist', function (done) {
-            var email = 'dummy@sap.com';
+            var email = 'dummy@example.com';
             var optOutService = commonServer.registry.getModule('OptOutService');
             optOutService.remove(email, dummyContext)
                 .then(function (removed) {

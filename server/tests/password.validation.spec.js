@@ -93,7 +93,7 @@ describe('Password Validation', function () {
 	it('Password shouldn\'t contain banned combinations', function () {
 
 		var bannedCombinations = [
-			'sap.com'
+
 		];
 
 		for (var i = 0, len = bannedCombinations.length; i < len; i++) {

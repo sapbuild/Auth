@@ -296,9 +296,9 @@ describe('Signup - User REST API Test', function () {
 
     it('Verify importUsers', function (done) {
         var newUsers = [
-            { email: 'test1@sap.com', name: 'test1', provider: 'principal-propagation', principal: 'test1@sap.com|sap.corp' },
-            { email: 'test2@sap.com', name: 'test2', provider: 'principal-propagation', principal: 'test2@sap.com|sap.corp' },
-            { email: 'test3@sap.com', name: 'test3', provider: 'principal-propagation', principal: 'test3@sap.com|sap.corp' }
+            { email: 'test1@example.com', name: 'test1', provider: 'principal-propagation', principal: 'test1@example.com|example.corp' },
+            { email: 'test2@example.com', name: 'test2', provider: 'principal-propagation', principal: 'test2@example.com|example.corp' },
+            { email: 'test3@example.com', name: 'test3', provider: 'principal-propagation', principal: 'test3@example.com|example.corp' }
         ];
         var testContext = {
             ip: '::1',
@@ -323,9 +323,9 @@ describe('Signup - User REST API Test', function () {
             .then(function (results) {
                 expect(results).to.exist;
                 expect(results.length).to.be.eq(3);
-                expect(results[0].email).to.be.eq('test1@sap.com');
-                expect(results[1].email).to.be.eq('test2@sap.com');
-                expect(results[2].email).to.be.eq('test3@sap.com');
+                expect(results[0].email).to.be.eq('test1@example.com');
+                expect(results[1].email).to.be.eq('test2@example.com');
+                expect(results[2].email).to.be.eq('test3@example.com');
                 done();
             })
             .catch(done);

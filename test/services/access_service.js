@@ -28,7 +28,7 @@ var testContext = {
     }
 };
 
-var emailInBlackList = 'blacklist.in@sap.com';
+var emailInBlackList = 'blacklist.in@example.com';
 
 var defaultRule = {
     _id: defaultRuleId,
@@ -36,7 +36,7 @@ var defaultRule = {
 };
 
 var domainGuestAccess = {
-    _id: '@sap.com',
+    _id: '@example.com',
     scope: [
         {
             name: 'access',
@@ -68,7 +68,7 @@ var domainNoAccess = {
 };
 
 var userSample = {
-    _id: 'zUser@sap.com',
+    _id: 'zUser@example.com',
     scope: [
         {
             name: 'access',
@@ -78,7 +78,7 @@ var userSample = {
 };
 
 var userSampleToDelete = {
-    _id: 'test@sap.com',
+    _id: 'test@example.com',
     scope: [
         {
             name: 'access',
@@ -246,7 +246,7 @@ describe('Access services and REST API Test', function () {
                 expect(values['accessRules'].length).to.be.equals(3);
                 expect(values['accessRules'][0]['_id']).to.be.equals('*');
                 expect(values['accessRules'][1]['_id']).to.be.equals('@noway.com');
-                expect(values['accessRules'][2]['_id']).to.be.equals('@sap.com');
+                expect(values['accessRules'][2]['_id']).to.be.equals('@example.com');
             })
             .then(testPassed(done), testFailed(done));
     });
@@ -277,7 +277,7 @@ describe('Access services and REST API Test', function () {
 
     it('should support getPermissions - registered address ', function (done) {
         var accessService = commonServer.registry.getModule('AccessService');
-        accessService.getPermissions('zUser@sap.com', 'access')
+        accessService.getPermissions('zUser@example.com', 'access')
             .then(function (permissions) {
                 expect(permissions.length).to.be.equals(1);
                 expect(permissions[0]).to.be.equals('guest');
@@ -287,7 +287,7 @@ describe('Access services and REST API Test', function () {
 
     it('should support getPermissions - unregistered address/registered domain', function (done) {
         var accessService = commonServer.registry.getModule('AccessService');
-        accessService.getPermissions('unregisteredUser@sap.com', 'study')
+        accessService.getPermissions('unregisteredUser@example.com', 'study')
             .then(function (permissions) {
                 expect(permissions.length).to.be.equals(1);
                 expect(permissions[0]).to.be.equals('participant');
@@ -313,11 +313,11 @@ describe('Access services and REST API Test', function () {
 
     it('should support inviteUsers API, study', function (done) {
         var accessService = commonServer.registry.getModule('AccessService');
-        accessService.inviteUsers(['toto@sap.com', emailInBlackList, 'titi@noway.com', 'tutu@noknown.com', userSample['_id']], 'study', testContext)
+        accessService.inviteUsers(['toto@example.com', emailInBlackList, 'titi@noway.com', 'tutu@noknown.com', userSample['_id']], 'study', testContext)
             .then(function (invitationResult) {
                 expect(invitationResult.length).to.be.equals(5);
                 invitationResult.forEach(function (invitedUser) {
-                    if (invitedUser.emailAddress === 'toto@sap.com') {
+                    if (invitedUser.emailAddress === 'toto@example.com') {
                         expect(invitedUser.successfullyProvisioned).to.be.equals(true);
                         expect(invitedUser.acceptNotification).to.be.equals(true);
                     } else if (invitedUser.emailAddress === emailInBlackList) {
@@ -340,11 +340,11 @@ describe('Access services and REST API Test', function () {
 
     it('should support inviteUsers API, projects', function (done) {
         var accessService = commonServer.registry.getModule('AccessService');
-        accessService.inviteUsers(['toto@sap.com', emailInBlackList, 'titi@noway.com', 'tutu@noknown.com', userSample['_id']], 'project', testContext)
+        accessService.inviteUsers(['toto@example.com', emailInBlackList, 'titi@noway.com', 'tutu@noknown.com', userSample['_id']], 'project', testContext)
             .then(function (invitationResult) {
                 expect(invitationResult.length).to.be.equals(5);
                 invitationResult.forEach(function (invitedUser) {
-                    if (invitedUser.emailAddress === 'toto@sap.com') {
+                    if (invitedUser.emailAddress === 'toto@example.com') {
                         expect(invitedUser.successfullyProvisioned).to.be.equals(true);
                         expect(invitedUser.acceptNotification).to.be.equals(true);
                     } else if (invitedUser.emailAddress === emailInBlackList) {

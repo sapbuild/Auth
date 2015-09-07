@@ -110,7 +110,6 @@ describe('Settings Controller', function () {
                     'password'
                 ],
                 bannedCharacterCombination: [
-                    '@sap.com'
                 ]
             });
 

@@ -334,12 +334,12 @@ describe('User Service', function () {
 
             it('Update Profile>>should update user profile (name and email)', function (done) {
                 var userService = commonServer.registry.getModule('UserService');
-                userService.updateProfile(user._id, {name: 'user1', email: 'local@sap.com'}, dummyContext)
+                userService.updateProfile(user._id, {name: 'user1', email: 'local@example.com'}, dummyContext)
                     .then(function (doc) {
                         expect(doc).to.exist;
                         expect(doc).to.be.an('object');
                         expect(doc.name).to.eq('user1');
-                        expect(doc.email).to.eq('local@sap.com');
+                        expect(doc.email).to.eq('local@example.com');
                         expect(doc.has_email_verified).to.be.false;
                     })
                     .then(testPassed(done), testFailed(done));
