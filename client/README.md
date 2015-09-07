@@ -1,4 +1,4 @@
-[norman-auth-client](https://github.wdf.sap.corp/Norman/Auth)
+norman-auth-client
 =====
 ###Norman authentication module.
 
