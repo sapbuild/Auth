@@ -66,7 +66,7 @@
     "norman-shell-client": "*",
     "norman-common-server": "*",
     "norman-server-tp": "*",
-    "node-sap-app-server": "*",
+    "node-sap-app-server": "0.1.2",
     "norman-audit-server": "*",
     "norman-testing-tp": "*",
     "norman-testing-tp-client": "*",
