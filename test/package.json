@@ -1,0 +1,32 @@
+{
+  "name": "norman-auth-e2e",
+  "version": "0.1.0",
+  "description": "Norman Auth End2End tests",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sapbuild/Auth.git"
+  },
+  "author": "",
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "norman-common-server": "*",
+    "norman-server-tp": "*",
+    "node-sap-app-server": "*",
+    "norman-audit-server": "*",
+    "norman-client-tp": "*",
+    "norman-shell-client": "*",
+    "norman-testing-server": "*",
+    "norman-testing-tp": "*",
+    "norman-testing-tp-client": "*"
+  }
+}
