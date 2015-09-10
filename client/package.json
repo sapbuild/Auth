@@ -13,6 +13,6 @@
     "url": "https://github.com/sapbuild/Auth.git"
   },
   "peerDependencies": {
-    "norman-client-tp": "0.1.9"
+    "norman-client-tp": "0.1.12"
   }
 }
