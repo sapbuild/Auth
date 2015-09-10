@@ -70,7 +70,7 @@
     "norman-audit-server": "0.1.2",
     "norman-testing-tp": "0.1.1",
     "norman-testing-tp-client": "0.1.1",
-    "norman-testing-server": "0.1.0",
+    "norman-testing-server": "0.1.1",
     "norman-promise":"0.1.1",
     "chromedriver": "2.15.0",
     "request": "^2.51.0",
