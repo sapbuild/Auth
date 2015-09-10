@@ -14,8 +14,8 @@
   },
   "maintainers": [],
   "peerDependencies": {
-    "norman-common-server": "*",
-    "norman-server-tp": "*"
+    "norman-common-server": "0.1.2",
+    "norman-server-tp": "0.1.0"
   },
   "dependencies": {
     "acl": "0.4.7",

@@ -19,14 +19,14 @@
   ],
   "dependencies": {},
   "peerDependencies": {
-    "norman-common-server": "*",
-    "norman-server-tp": "*",
-    "node-sap-app-server": "*",
-    "norman-audit-server": "*",
-    "norman-client-tp": "*",
-    "norman-shell-client": "*",
-    "norman-testing-server": "*",
-    "norman-testing-tp": "*",
-    "norman-testing-tp-client": "*"
+    "norman-common-server": "0.1.2",
+    "norman-server-tp": "0.1.0",
+    "node-sap-app-server": "0.1.2",
+    "norman-audit-server": "0.1.0",
+    "norman-client-tp": "0.1.12",
+    "norman-shell-client": "0.1.0",
+    "norman-testing-server": "0.1.0",
+    "norman-testing-tp": "0.1.0",
+    "norman-testing-tp-client": "0.1.0"
   }
 }
