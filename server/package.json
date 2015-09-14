@@ -13,10 +13,6 @@
     "url": "https://github.com/sapbuild/Auth.git"
   },
   "maintainers": [],
-  "peerDependencies": {
-    "norman-common-server": "*",
-    "norman-server-tp": "*"
-  },
   "dependencies": {
     "acl": "0.4.7",
     "express-jwt": "3.0.0",

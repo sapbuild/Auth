@@ -17,16 +17,5 @@
       "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
     }
   ],
-  "dependencies": {},
-  "peerDependencies": {
-    "norman-common-server": "*",
-    "norman-server-tp": "*",
-    "node-sap-app-server": "*",
-    "norman-audit-server": "*",
-    "norman-client-tp": "*",
-    "norman-shell-client": "*",
-    "norman-testing-server": "*",
-    "norman-testing-tp": "*",
-    "norman-testing-tp-client": "*"
-  }
+  "dependencies": {}
 }
