@@ -1,6 +1,6 @@
 {
   "name": "norman-auth-client",
-  "version": "0.1.2",
+  "version": "0.3.0",
   "description": "Express module to handle user authentication",
   "licenses": [
     {
