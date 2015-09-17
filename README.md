@@ -134,3 +134,10 @@ A default Admin user is created by CI BUILD automatically.
   2. Script for admin creation : node createAdmin.js --name <admin name> --password <admin password>  --email <admin email>
 
   Note: this script creates a user with a Standard and an Admin roles.
+  
+  
+ # BUILD on GitHub
+
+[Click here](https://github.com/SAP/BUILD) to visit the central BUILD project on GitHub, where you can find out more!
+
+[Click here](https://github.com/SAP/BUILD/blob/master/Contributing.md) to view the BUILD Contribution Guidelines. 
