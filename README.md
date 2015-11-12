@@ -1,3 +1,9 @@
+[![Build](https://img.shields.io/travis/sapbuild/Auth.svg?style=flat-square)](http://travis-ci.org/sapbuild/Auth)
+[![Version](https://img.shields.io/npm/v/norman-auth-client.svg?style=flat-square)](https://npmjs.org/package/norman-auth-client)
+[![Dependency Status](https://david-dm.org/sapbuild/Auth.svg)](https://david-dm.org/sapbuild/Auth)
+[![devDependency Status](https://david-dm.org/sapbuild/Auth/dev-status.svg)](https://david-dm.org/sapbuild/Auth#info=devDependencies)
+[![Coverage](https://img.shields.io/coveralls/sapbuild/Auth/master.svg?style=flat-square)](https://coveralls.io/r/sapbuild/Auth?branch=master)
+
 Norman Auth
 =====
 
